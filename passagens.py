@@ -12,7 +12,8 @@ viagens = int(input('Quantas viagens você faz por dia? '))
     
 viagensMensais = viagens * dias
 custoMensal = tarifa * viagensMensais
-abastecimentoMes = custoMensal - saldoRemanescente
+if saldoRemanescente > 0:
+    abastecimentoMes = custoMensal - saldoRemanescente
 saldo = valor - abastecimentoMes
 
 print('==========================================================')
